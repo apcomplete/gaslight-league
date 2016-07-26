@@ -39,6 +39,7 @@ GEM
     arel (6.0.3)
     autoprefixer-rails (6.3.7)
       execjs
+    bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.7)
@@ -49,6 +50,12 @@ GEM
     coderay (1.1.1)
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
+    devise (4.2.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.1)
+      responders
+      warden (~> 1.2.3)
     dotenv (2.1.1)
     dotenv-rails (2.1.1)
       dotenv (= 2.1.1)
@@ -77,6 +84,7 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    orm_adapter (0.5.0)
     pg (0.18.4)
     pkg-config (1.1.7)
     pry (0.10.4)
@@ -117,6 +125,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.16.0)
     rake (11.2.2)
+    responders (2.2.0)
+      railties (>= 4.2.0, < 5.1)
     sass (3.4.22)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -145,6 +155,8 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
+    warden (1.2.6)
+      rack (>= 1.0)
     web-console (2.3.0)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -157,6 +169,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   byebug
+  devise
   dotenv-rails
   jquery-rails
   pg

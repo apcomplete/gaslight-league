@@ -85,3 +85,5 @@ initial_scorings.each do |row|
     Scoring.create!(trainer: trainer, category: c, initial_value: initial, value: initial)
   end
 end
+
+User.create!(email: "admin@teamgaslight.com", password: "unicorn-office", password_confirmation: "unicorn-office")
