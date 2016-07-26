@@ -1,15 +1,29 @@
-# If you do not have OpenSSL installed, change
-# the following line to use 'http://'
 source 'https://rubygems.org'
 
-# For faster file watcher updates on Windows:
-gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 
-# Windows does not come with time zone data
-gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
+gem 'rails', '4.2.4'
+gem 'pg'
 
-# Middleman Gems
-gem 'middleman', '>= 4.0.0'
-gem 'middleman-livereload'
-gem 'middleman-compass', '>= 4.0.0'
-gem "middleman-deploy", "~> 2.0.0.pre.alpha"
+gem 'bootstrap-sass'
+gem 'jquery-rails'
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'unicorn-rails'
+
+# Use Unicorn as the app server
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug' unless ENV['CI']
+  gem 'dotenv-rails'
+  gem 'pry'
+end
+
+group :development do
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
+end
+
+group :staging, :production do
+  gem 'rails_12factor'
+end
