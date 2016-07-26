@@ -1,0 +1,5 @@
+<% @categories.each_slice(3) do |category_row| %>
+  <div class="<%= category_row_class(category_row) %>">
+    <%= render category_row %>
+  </div>
+<% end %>

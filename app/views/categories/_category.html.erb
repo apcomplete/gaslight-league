@@ -1,0 +1,7 @@
+<section class="category col-md-4 col-sm-12" id="category-<%= category.name.underscore %>">
+  <h3 class="category__title"><%= category.name %></h3>
+  <p class="category__description"><%= category.description.html_safe %></p>
+  <ul class="contest-rankings">
+    <%= render category.scorings.ordered %>
+  </ul>
+</section>

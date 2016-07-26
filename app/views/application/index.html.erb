@@ -1,0 +1,53 @@
+<section id="how-it-works">
+  <div class="container">
+    <div class="col-xs-12">
+      <h2>Welcome Trainers!</h2>
+      <p class="rules" style="margin-bottom: 20px;">
+        <span style="display: block; margin-top: 5px; clear: both;">
+          Enter your updated metrics in the <%= link_to "Daily Stats Spreadsheet", "https://docs.google.com/a/gaslight.co/spreadsheets/d/1YFTyfYoaTzJQI5RQI0et02u3eo5QCht3K0gExtqqAQ8/edit?usp=sharing" %>! Should update at the end of each weekday.
+        </span>
+        <span style="display: block; margin-top: 5px; clear: both;">
+        <strong>Last Update:</strong> July 25, 11:15AM EST
+        </span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="teams">
+  <div class="container">
+    <div class="col-xs-12">
+      <h2 style="margin-bottom: 20px;">Scoreboard</h2>
+      <div class="container">
+        <%= render @teams %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="categories">
+  <div class="container">
+    <div class="col-xs-12">
+      <h2 style="margin-bottom: 20px;">Categories</h2>
+    </div>
+    <div id="rank-toggle">
+      <div class="toggle-box">
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-primary active" for="small-ranking">
+            <input type="radio" name="options" id="small-ranking" autocomplete="off"> Top 3
+          </label>
+          <label class="btn btn-primary" for="large-ranking">
+            <input type="radio" name="options" id="large-ranking" autocomplete="off" checked> Full List
+          </label>
+        </div>
+      </div>
+      <div class="small-ranking__container">
+        <% @categories.each_slice(3) do |category_row| %>
+          <div class="<%= category_row_class(category_row) %>">
+            <%= render category_row %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

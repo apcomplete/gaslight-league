@@ -1,15 +1,33 @@
 // This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
-// about supported directives.
-//
 //= require jquery
-//= require jquery_ujs
-//= require_tree .
+//= require bootstrap-sprockets
+
+// window.onload = init;
+// function init() {
+//   document.getElementById('small-ranking').onclick = closeLargeRanking;
+//   document.getElementById('large-ranking').onclick = openLargeRanking;
+// }
+//
+// function openLargeRanking() {
+//   document.getElementById('rank-toggle').setAttribute('class','open');
+// }
+//
+// function closeLargeRanking() {
+//   document.getElementById('rank-toggle').setAttribute('class','');
+// }
+
+$(document).ready(function(){
+  $('.contest-rankings').each(function () {
+    $(this).find('.scoremarker:gt(2)').addClass('hide');
+  });
+
+  $('#small-ranking').parent().click(function(){
+    $('.contest-rankings').each(function () {
+      $(this).find('.scoremarker:gt(2)').addClass('hide');
+    });
+  });
+
+  $('#large-ranking').parent().click(function(){
+    $('.contest-rankings .scoremarker').removeClass('hide');
+  });
+});

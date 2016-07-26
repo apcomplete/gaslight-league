@@ -1,0 +1,128 @@
+header {
+  padding: 20px;
+  background-image: image-url('pokemonleague_alt.svg');
+  // background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 80px;
+  background-blend-mode: lighten;
+
+  &.green {background-color: #58aa44; color: #fff;}
+  &.blue {background-color: #0b89af; color: #fff;}
+  &.red {background-color: #c91f1f; color: #fff;}
+  &.yellow {background-color: #f4be27; color: #333;}
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  height: 180px;
+  width: auto;
+}
+
+.contest-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contest-logo {
+  max-width: 250px;
+  display: block;
+  margin: 0 auto;
+
+  @media (max-width: 480px) {
+    width: 33vw;
+  }
+}
+
+section {
+  background-color: white;
+  padding: 30px 0 45px 0;
+
+  &> .container {
+    max-width: 1170px;
+    width: 100%;
+  }
+
+  &.category > .container {
+    width: auto;
+  }
+
+  &.category .container {
+    width: auto;
+  }
+
+  h2 {
+    font-size: 2.5em;
+    text-align: center;
+
+    &+ p {
+      text-align: center;
+      margin-bottom: 3em;
+    }
+  }
+}
+
+[class*="col-"] > .container {
+  width: 100%;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+}
+
+body > section:nth-child(even) {
+  background-color: #efefef;
+}
+
+footer {
+  background-color: #444;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.team-list {
+  text-align: center;
+}
+
+.team-list__item {
+  margin-top: 5px;
+
+  &:first-child {
+    margin-top: 15px;
+  }
+}
+
+.small-ranking__container {
+  display: block;
+  transition: all 0.1 ease-in;
+}
+.large-ranking__container {
+  display: none;
+  transition: all 0.1 ease-in;
+}
+
+#rank-toggle {
+
+  &.open {
+    .small-ranking__container {
+      display: none;
+      transition: all 0.1 ease-in;
+    }
+    .large-ranking__container {
+      display: block;
+      transition: all 0.1 ease-in;
+    }
+  }
+}
+
+.toggle-box {
+  clear: both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+}
