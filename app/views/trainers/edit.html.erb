@@ -4,7 +4,7 @@
     <%= simple_form_for @form, url: trainer_path do |f| %>
       <fieldset>
         <%= f.simple_fields_for :scorings do |s| %>
-          <%= s.input :value, label: "#{s.object.category.name} (#{s.object.category.help_text})".html_safe %>
+          <%= s.input :value, label: "#{s.object.category.name} (#{s.object.category.help_text})".html_safe, hint: s.object.category.description.html_safe %>
         <% end %>
       </fieldset>
       <div class="form-actions">
