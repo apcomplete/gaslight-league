@@ -4,11 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_team_scorer
 
-  def index
-    @teams = Team.all
-    @categories = Category.all
-  end
-
   def after_sign_in_path_for(resource)
     trainers_path
   end
