@@ -30,7 +30,7 @@ module ApplicationHelper
     if delta % 1 == 0
       delta.to_i
     else
-      delta
+      delta.round(2)
     end
   end
 
