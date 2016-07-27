@@ -70,12 +70,12 @@ initial_scorings = [
   {"Name" => "Haley", "Hoarder"=>"0", "Going the Distance"=>"0", "Gym Rat"=>"0", "More Fish in the Sea"=>"0", "Community Organizer"=>"0", "Gotta Hatch 'Em All"=>"0", "Collector"=>"0", "Biologist"=>"0", },
   {"Name" => "Patrick", "Hoarder"=>"410", "Going the Distance"=>"18.89", "Gym Rat"=>"0", "More Fish in the Sea"=>"13", "Community Organizer"=>"0", "Gotta Hatch 'Em All"=>"8", "Collector"=>"53", "Biologist"=>"21", },
   {"Name" => "Michelle", "Hoarder"=>"84", "Going the Distance"=>"12.15", "Gym Rat"=>"0", "More Fish in the Sea"=>"10", "Community Organizer"=>"0", "Gotta Hatch 'Em All"=>"3", "Collector"=>"36", "Biologist"=>"4", },
-  {"Name" => "Doug", "Hoarder"=>"528", "Going the Distance"=>"44.61", "Gym Rat"=>"22", "More Fish in the Sea"=>"23", "Community Organizer"=>"1", "Gotta Hatch 'Em All"=>"22", "Collector"=>"71", "Biologist"=>"64", },
+  {"Name" => "Doug", "Hoarder"=>"528", "Going the Distance"=>"44.61", "Gym Rat"=>"22", "More Fish in the Sea"=>"23", "Community Organizer"=>"0", "Gotta Hatch 'Em All"=>"22", "Collector"=>"71", "Biologist"=>"64", },
   {"Name" => "Peter", "Hoarder"=>"0", "Going the Distance"=>"0", "Gym Rat"=>"0", "More Fish in the Sea"=>"0", "Community Organizer"=>"0", "Gotta Hatch 'Em All"=>"0", "Collector"=>"0", "Biologist"=>"0", },
   {"Name" => "Super Chris", "Handle"=>"—", "Hoarder"=>"0", "Going the Distance"=>"0", "Gym Rat"=>"0", "More Fish in the Sea"=>"0", "Community Organizer"=>"0", "Gotta Hatch 'Em All"=>"0", "Collector"=>"0", "Biologist"=>"0", },
   {"Name" => "Alex P.", "Hoarder"=>"499", "Going the Distance"=>"22.07", "Gym Rat"=>"0", "More Fish in the Sea"=>"3", "Community Organizer"=>"0", "Gotta Hatch 'Em All"=>"12", "Collector"=>"65", "Biologist"=>"33", },
   {"Name" => "James T.", "Hoarder"=>"0", "Going the Distance"=>"0", "Gym Rat"=>"0", "More Fish in the Sea"=>"0", "Community Organizer"=>"0", "Gotta Hatch 'Em All"=>"0", "Collector"=>"0", "Biologist"=>"0", },
-  {"Name" => "Kat", "Hoarder"=>"380", "Going the Distance"=>"18.2", "Gym Rat"=>"12", "More Fish in the Sea"=>"18", "Community Organizer"=>"2", "Gotta Hatch 'Em All"=>"10", "Collector"=>"61", "Biologist"=>"13", },
+  {"Name" => "Kat", "Hoarder"=>"380", "Going the Distance"=>"18.2", "Gym Rat"=>"12", "More Fish in the Sea"=>"18", "Community Organizer"=>"0", "Gotta Hatch 'Em All"=>"10", "Collector"=>"61", "Biologist"=>"13", },
 ]
 
 initial_scorings.each do |row|
