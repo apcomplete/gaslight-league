@@ -19,6 +19,7 @@ group :development, :test do
   gem 'byebug' unless ENV['CI']
   gem 'dotenv-rails'
   gem 'pry'
+  gem 'rspec-rails'
 end
 
 group :development do
