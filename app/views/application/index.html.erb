@@ -19,7 +19,9 @@
     <div class="col-xs-12">
       <h2 style="margin-bottom: 20px;">Scoreboard</h2>
       <div class="container">
-        <%= render @teams %>
+        <% @teams.each do |team| %>
+          <%= render partial: "teams/team", locals: { team: team, score: @team_scorer.score_for(team) } %>
+        <% end %>
       </div>
     </div>
   </div>

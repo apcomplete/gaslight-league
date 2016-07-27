@@ -1,0 +1,15 @@
+<section>
+  <div class="container">
+    <h1><%= @trainer.name %></h1>
+    <%= simple_form_for @form, url: trainer_path do |f| %>
+      <fieldset>
+        <%= f.simple_fields_for :scorings do |s| %>
+          <%= s.input :value, label: "#{s.object.category.name} (#{s.object.category.help_text})".html_safe %>
+        <% end %>
+      </fieldset>
+      <div class="form-actions">
+        <%= f.button :submit, "Update", class: "btn btn-primary pull-right" %>
+      </div>
+    <% end %>
+  </div>
+</section>

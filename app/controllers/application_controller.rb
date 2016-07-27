@@ -6,6 +6,11 @@ class ApplicationController < ActionController::Base
   def index
     @teams = Team.all
     @categories = Category.all
-    @current_leader = "yellow"
+    @team_scorer = TeamScorer.new(@teams)
+    @team_scorer.score_teams!
+  end
+
+  def after_sign_in_path_for(resource)
+    trainers_path
   end
 end

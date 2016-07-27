@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users, skip: [:registrations, :password]
+  devise_for :users, skip: [:registrations, :password], path: '', path_names: {:sign_in => 'login', :sign_out => 'logout'}
   root to: 'application#index'
-  resources :admin, only: [:index] do
-    collection do
-      resources :trainers, only: [:edit, :update]
-    end
+  scope :admin do
+    resources :trainers, only: [:index, :edit, :update]
   end
 end

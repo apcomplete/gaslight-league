@@ -4,6 +4,6 @@ class Scoring < ActiveRecord::Base
   has_one :team, through: :trainer
 
   def self.ordered
-    order("value DESC")
+    order("delta_value DESC")
   end
 end
