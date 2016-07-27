@@ -1,6 +1,6 @@
 module ApplicationHelper
-  def current_leader
-    "yellow"
+  def current_leader_class(team_scorer)
+    team_scorer.top_team.color
   end
 
   def category_row_class(row)
