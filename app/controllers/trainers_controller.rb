@@ -14,8 +14,7 @@ class TrainersController < ApplicationController
   def update
     @form = TrainerForm.new(trainer_params)
     if @form.save
-      flash[:success] = 'Trainer was successfully updated.'
-      redirect_to trainers_path
+      redirect_to trainers_path, notice: 'Trainer was successfully updated.'
     else
       render :edit
     end

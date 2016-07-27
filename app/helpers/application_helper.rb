@@ -1,4 +1,19 @@
 module ApplicationHelper
+  BOOTSTRAP_FLASH_MSG = {
+    success: 'alert-success',
+    error: 'alert-danger',
+    alert: 'alert-warning',
+    notice: 'alert-success'
+  }
+
+  def admin_path
+    if user_signed_in?
+      trainers_path
+    else
+      new_user_session_path
+    end
+  end
+
   def current_leader_class(team_scorer)
     team_scorer.top_team.color
   end
@@ -17,5 +32,9 @@ module ApplicationHelper
     else
       delta
     end
+  end
+
+  def bootstrap_class_for(flash_type)
+    BOOTSTRAP_FLASH_MSG.fetch(flash_type.to_sym, flash_type.to_s)
   end
 end
